@@ -1,4 +1,4 @@
-ruby '2.0.0'
+ruby '2.2.3'
 source 'https://rubygems.org'
 
 # PostgreSQL driver
@@ -10,6 +10,7 @@ gem 'sinatra-contrib'
 
 # Use Thin for our web server
 gem 'thin'
+gem 'bcrypt'
 
 gem 'activesupport', '~>4.1'
 gem 'activerecord', '~>4.1'
@@ -17,6 +18,8 @@ gem 'activerecord', '~>4.1'
 gem 'rake'
 
 gem 'shotgun'
+
+gem 'pry'
 
 group :test do
   gem 'faker'
