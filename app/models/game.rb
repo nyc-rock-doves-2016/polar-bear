@@ -6,7 +6,18 @@ class Game < ActiveRecord::Base
   validates :deck, :user, presence: true
 
   def next_card
-    all = deck.cards.all
-    guessed = guesses.all.where(is_correct: true).collect {|g| g.rand }
+    guesses = self.guesses
+    deck = self.deck
+
+    cards = guesses.map do |guess|
+      guess.card
+    end
+
+    remaining_cards_arr = deck.cards - cards
+
+    remaining_cards_arr.sample
+
+    # all = deck.cards.all
+    # guessed = guesses.all.where(is_correct: true).collect {|g| g.rand }
   end
 end

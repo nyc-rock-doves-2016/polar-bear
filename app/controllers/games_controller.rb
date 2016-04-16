@@ -14,10 +14,11 @@ end
 #   redirect '/games/:id/cards/:card_id'
 # end
 
-get '/games/:id/cards/:card_id' do
 
-  @card = Card.find_by(id: params[:card_id])
-  erb :'/cards/show'
+post '/games/:id/cards/:card_id' do
+
+
+  erb :'/games/show'
 end
 
 post '/games/:id/cards/:card_id/guess' do
