@@ -34,6 +34,12 @@
 #   )
 # end
 
+
+User.create!(
+  username: "default",
+  password:"default"
+  )
+
 Deck.create!(
   name: "Music",
   description:"Test your music knowledge"
