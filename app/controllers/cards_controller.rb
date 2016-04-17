@@ -1,7 +1,7 @@
-get '/games/:game_id/cards/:card_id' do
+get '/games/:game_id/cards/:id' do
 @game = Game.find_by(id: params[:game_id])
 @deck = @game.deck
-@card = Card.find_by(id: params[:card_id])
+@card = Card.find_by(id: params[:id])
 
 erb :'/cards/show'
 end
