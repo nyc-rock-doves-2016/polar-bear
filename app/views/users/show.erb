@@ -1,0 +1,19 @@
+
+
+
+<h1>Welcome <%= @user.username.capitalize %>!</h1>
+
+
+<h2> Results </h2>
+
+<h3> Click the name of a deck to see your results! </h3>
+  <% @games.each do |game| %>
+    <div>
+    <a href="/games/<%= game.id%>/show"><%= game.deck.name %> </a>
+  </div>
+  <br>
+     <% end %>
+
+
+
+

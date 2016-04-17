@@ -14,3 +14,10 @@ post '/users' do
     erb :'/users/new'
   end
 end
+
+get '/users/:id' do
+  @user = User.find_by(id: params[:id])
+  @games = current_user.games
+
+  erb :'/users/show'
+end
