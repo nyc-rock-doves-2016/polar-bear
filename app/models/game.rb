@@ -10,11 +10,9 @@ class Game < ActiveRecord::Base
     deck = self.deck
     cards = guesses.map do |guess|
       guess.card
-      # binding.pry
     end
     remaining_cards_arr = deck.cards - cards
     remaining_cards_arr.sample
-
   end
 
   def total_guesses

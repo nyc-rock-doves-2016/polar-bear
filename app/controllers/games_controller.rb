@@ -2,7 +2,6 @@
 get '/games/:game_id/show' do
   @game = Game.find_by(id: params[:game_id])
   @deck = @game.deck
-
   erb :'games/show'
 end
 
