@@ -8,12 +8,11 @@ class Game < ActiveRecord::Base
   def next_card
     guesses = self.guesses
     deck = self.deck
-    cards = guesses.each do |guess|
+    cards = guesses.map do |guess|
       guess.card
       # binding.pry
     end
     remaining_cards_arr = deck.cards - cards
-    # binding.pry
     remaining_cards_arr.sample
 
     # all = deck.cards.all
