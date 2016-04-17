@@ -18,15 +18,15 @@ post '/guesses' do
     guess.is_correct = true
     guess.save
     @game.next_card
-      # redirect "decks/#{@deck.id}/games/new"
+      redirect "decks/#{@deck.id}/games/new"
       # redirect "/games/#{@game.id}/cards/#{@card.id}"
-      redirect "/decks/#{@deck.id}/cards/#{@card.id}"
+      # redirect "/decks/#{@deck.id}/cards/#{@card.id}"
    else
     guess.is_correct = false
     guess.save
     @game.next_card
-       # redirect "decks/#{@deck.id}/games/new"
-       redirect "/games/#{@game.id}/cards/#{@card.id}"
+       redirect "decks/#{@deck.id}/games/new"
+       # redirect "/games/#{@game.id}/cards/#{@card.id}"
   end
 # end
 end

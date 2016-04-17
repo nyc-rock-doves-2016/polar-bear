@@ -15,8 +15,27 @@ body {
 
 }
 
-h1{
+.deck-list h1{
   text-align: center;
+  font-size: 2em;
+}
+
+.deck-list h2{
+  text-align: center;
+  font-size: 1.5em;
+}
+.deck-list{
+  text-align: center;
+}
+
+.deck-list a {
+  text-decoration:  none;
+  font-size: 2em;
+}
+
+img {
+  width:325px;
+  height:450px;"
 }
 
 
