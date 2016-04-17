@@ -14,11 +14,12 @@ end
 #   redirect '/games/:id/cards/:card_id'
 # end
 
+get '/decks/:id/cards/:id' do
+@card = Card.find(params[:id])
+@game = Game.find(@card.guesses.last.game_id)
+@deck = Deck.find(@card.deck_id)
 
-post '/games/:id/cards/:card_id' do
-
-
-  erb :'/games/show'
+  erb :'/cards/show'
 end
 
 post '/games/:id/cards/:card_id/guess' do

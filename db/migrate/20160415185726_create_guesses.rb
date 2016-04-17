@@ -4,7 +4,7 @@ class CreateGuesses < ActiveRecord::Migration
       t.references :game, null: false
       t.references :card, null: false
       t.references :user
-      t.boolean :is_correct, default: false
+      t.boolean :is_correct
 
       t.timestamps null: false
     end

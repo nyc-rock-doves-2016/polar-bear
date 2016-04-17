@@ -5,7 +5,4 @@ class Guess < ActiveRecord::Base
 
   validates :game, :card, :user, :is_correct, presence: true
 
-  # def is_correct?(x)
-  #   self.guess.card ==
-  # end
 end

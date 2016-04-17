@@ -1,5 +1,11 @@
 <h1> Welcome to Flashcards! </h1>
 
+<h2> Choose A Deck Below </h2>
+
+
 <% @decks.each do |deck| %>
+<div id="deck-list">
+  <br>
   <a href="/decks/<%= deck.id %>"><%=deck.name %></a>
 <% end %>
+</div>
