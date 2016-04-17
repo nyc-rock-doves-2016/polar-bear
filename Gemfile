@@ -21,7 +21,7 @@ gem 'shotgun'
 
 gem 'pry'
 
-group :test do
   gem 'faker'
+group :test do
   gem 'rspec'
 end
