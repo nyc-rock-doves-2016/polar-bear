@@ -10,12 +10,22 @@ class Game < ActiveRecord::Base
     deck = self.deck
     cards = guesses.map do |guess|
       guess.card
-      # binding.pry
     end
     remaining_cards_arr = deck.cards - cards
     remaining_cards_arr.sample
+  end
 
-    # all = deck.cards.all
-    # guessed = guesses.all.where(is_correct: true).collect {|g| g.rand }
+  def total_guesses
+    self.guesses.length
+  end
+
+  def total_correct
+    correct = []
+    self.guesses.each do | guess |
+      if guess.is_correct == true
+        correct << guess
+      end
+    end
+    return correct.length
   end
 end

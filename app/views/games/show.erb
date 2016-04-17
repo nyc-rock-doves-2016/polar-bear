@@ -2,3 +2,18 @@
 
 <h2>Deck Name: <%= @deck.name %></h2>
 
+<h2>Total Number of Guesses: <%= @game.total_guesses %> </h2>
+
+<h2> Number Correct: <%= @game.total_correct %>
+
+<% @game.deck.cards.each do |card| %>
+<div>
+  <%= card.question %> |
+  <%= card.answer %> |
+</div>
+<% end %>
+
+<br>
+
+<a href="/"> Return Home </a>
+
