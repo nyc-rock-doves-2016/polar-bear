@@ -6,4 +6,9 @@
 
 <h2> <%= @deck.description %> </h2>
 
-<a href="/decks/<%= @deck.id %>/games/new">Play</a>
+
+<form action="/games" method= "POST">
+  <input type="hidden" name="game[deck_id]" value="<%=@deck.id %>">
+  <input type ="submit" name="Play" >
+</form>
+
