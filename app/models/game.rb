@@ -15,7 +15,19 @@ class Game < ActiveRecord::Base
     remaining_cards_arr = deck.cards - cards
     remaining_cards_arr.sample
 
-    # all = deck.cards.all
-    # guessed = guesses.all.where(is_correct: true).collect {|g| g.rand }
+  end
+
+  def total_guesses
+    self.guesses.length
+  end
+
+  def total_correct
+    correct = []
+    self.guesses.each do | guess |
+      if guess.is_correct == true
+        correct << guess
+      end
+    end
+    return correct.length
   end
 end

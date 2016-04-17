@@ -1,6 +1,6 @@
 # potential game show page
 get '/games/:game_id/show' do
-  @game = Game.find_by(params[:game_id])
+  @game = Game.find_by(id: params[:game_id])
   @deck = @game.deck
 
   erb :'games/show'
