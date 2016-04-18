@@ -1,19 +1,21 @@
+<div class= game-show>
+
 <h1> Game Over!<h1>
 
 <h2>Deck Name: <%= @deck.name %></h2>
 
 <h2>Total Number of Guesses: <%= @game.total_guesses %> </h2>
 
-<h2> Number Correct: <%= @game.total_correct %>
+<h2> Number Correct: <%= @game.total_correct %></h2>
 
-<% @game.deck.cards.each do |card| %>
+<h3><% @game.deck.cards.each do |card| %>
 <div>
   <%= card.question %> |
   <%= card.answer %> |
 </div>
-<% end %>
+<% end %></h3>
 
 <br>
 
 <a href="/"> Return Home </a>
-
+</div>
