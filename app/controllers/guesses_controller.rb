@@ -1,5 +1,11 @@
 #potential guess index page
 post '/guesses' do
+  #ZM: Okay a few things here...
+  #1. there is to much in this single route
+  #2. your indentation is not correct
+  #3. you are doing the same create method twice
+  #4. the current_user method should return the default user if no current user exsists
+  
   card = Card.find(params[:card_id])
   if current_user
   user = current_user

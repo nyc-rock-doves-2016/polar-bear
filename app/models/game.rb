@@ -21,6 +21,7 @@ class Game < ActiveRecord::Base
 
   def total_correct
     correct = []
+    #ZM: we can reduce this to guesses.select(&:is_correct).length
     self.guesses.each do | guess |
       if guess.is_correct == true
         correct << guess
