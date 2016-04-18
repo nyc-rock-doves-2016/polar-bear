@@ -1,9 +1,4 @@
 #potential guess index page
-
-get '/guesses' do
-
-end
-
 post '/guesses' do
   card = Card.find(params[:card_id])
   if current_user
@@ -25,7 +20,4 @@ end
       redirect "/games/#{game.id}/show"
       erb :'games/show'
     end
-
-      # redirect "/games/#{@game.id}/cards/#{@card.id}"
-      # redirect "/decks/#{@deck.id}/cards/#{@card.id}"
 end
