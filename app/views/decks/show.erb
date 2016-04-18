@@ -1,5 +1,5 @@
 
-
+<div class= deck-show>
 
 
 <h1> <%= @deck.name %> </h1>
@@ -9,6 +9,7 @@
 
 <form action="/games" method= "POST">
   <input type="hidden" name="game[deck_id]" value="<%=@deck.id %>">
-  <input type ="submit" name="Play" >
+  <input type ="submit" value="Play" >
 </form>
 
+</div>

@@ -41,7 +41,7 @@ User.create!(
   )
 
 Deck.create!(
-  name: "Music",
+  name: "MUSIC",
   description:"Test your music knowledge"
   )
 
